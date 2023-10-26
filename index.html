@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/9a6e886ad1.js" crossorigin="anonymous"></script>
+    <title>Kusai's Protfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/image1.png" class="logo">
+            <ul>
+                <li><a href="#header">Main Page</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#contact">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <div class="header-text">
+                <p>SQA Engineer </p>
+                <h1>Hello World! I'm <span>Kusai</span>, <br> a recent Computer Science <br> Graduate . </h1>
+            </div>
+        </nav>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="first-col">
+                <img src="images/kusai.png">
+            </div>
+            <div class="second-col">
+                <h1 class="sub-title">About Me</h1>
+                <p class="subtitle-text">I am a dynamic and results-driven software test engineer with a strong foundation in computer science and 
+                    a genuine enthusiasm for ensuring the delivery of high-quality software. Holding a recent degree in Computer Science, 
+                    I bring fresh perspectives and up-to-date knowledge to the world of software testing. I am eager to take on a challenging, 
+                    high-energy role that allows me to apply my creative problem-solving skills in a fast-paced environment. 
+                    I am committed to seizing growing opportunities and making a significant impact in the field of software engineering.
+                    During my free time, I love playing FIFA and soccer with my friends. When I want to unwind and connect with nature, I go hiking. 
+                    Exploring trails and enjoying the outdoors refreshes my mind and keeps me active.  
+                </p>
+                <div class="tab-names">
+                    <div class="tab-link active-link" onclick="opentab('Education')">Education</div>
+                    <div class="tab-link"onclick="opentab('Experience')">Experience</div>
+                    <div class="tab-link"onclick="opentab('Projects')">Projects</div>
+                </div>
+                <div class="tabcontains active-tab" id="Education">
+                    <ul>
+                        <li><span>Bachelor Of Science</span><br> Portand State University Computer Science Bachelor Degree | Class Of 2023 </li>
+                    </ul>
+                </div>
+                <div class="tabcontains" id="Experience">
+                    <ul>
+                        <li><span>Junior QA Testing Engineer</span>  | Novus Lab 2019-2022<br> 
+                            Employing advanced techniques, I utilized automated scripts 
+                            and Android Debugging Bridge (ADB) shell commands 
+                            to ensure comprehensive and precise testing, contributing significantly to the success of high-profile endeavors like Facebook, Microsoft and Amazon.
+                        </li>
+                        <li><span>Technical Mentor</span>  | ICP Robotic Club 2020-2022 <br> Led instructional sessions for students, 
+                            focusing on LEGO Mindstorms EV3 and Virtual Brick software, imparting essential
+                            skills in robotic programming and computational thinking. </li>
+                    </ul>
+                </div>
+                <div class="tabcontains" id="Projects">
+                    <ul>
+                        <li><span>StressAI | Portland State University</span><br> I collaborated with a team to create an Android health app using Flutter. 
+                            We incorporated machine learning and Flusk API to analyze blink rate 
+                            and brow position in images, enabling stress level measurement and management.My specific role 
+                            was in developing the front-end interface, ensuring a user-friendly experience. </li>
+                        <li><span>AASPIRE Project | Portland State University</span><br> Me and my team  upgraded a research institution's website, creating an admin website, iOS, and Android apps. 
+                            These tools enable users from the autistic community to answer questions about doctor visits. 
+                            Their responses are transformed into PDFs, guiding medical providers on making visits more comfortable. 
+                            My role involved front-end development, ensuring a user-friendly interface. 
+                            I also designed and executed a rigorous testing strategy for quality assurance.</li>
+                        <li><span>Amazon Astro Robot | Novus Lab </span><br> I played a key role in Amazon's Astro Robot project which was released back in 2021, 
+                            creating test environments and conducting rigorous tests to ensure quality 
+                            standards for a successful launch. My contributions were vital in delivering a high-quality product to customers.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="left-container">
+                <h1 class="sub-title"> Contact Me </h1>
+                <P><i class="fa-solid fa-square-phone"></i> (503) 317-6218</P>
+                <p><i class="fa-solid fa-at"></i>kusaielmusrati@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/kusai-elmusraty-aa967b235/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/elmuss2"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="/images/KusaiElmusRM.pdf" class="btn btn2">
+                    Download My Resume <i class="fa-solid fa-circle-down"></i>
+                </a>
+            </div>
+            <div class="right-container">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="Email" placeholder="Your email address" required>
+                    <textarea name="Messege" rows="10" placeholder="Your Messege" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2023 Kusai Elmusraty. All rights reserved</p>
+    </div>
+
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-link");
+    var tabcontainings = document.getElementsByClassName("tabcontains");
+
+    function opentab(tabname)
+    {
+        for (tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontain of tabcontainings)
+        {
+            tabcontain.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzvCZeAQwlDTkcouwGddAmQkv6Sxw6SxpkvzChLwOJtYj7uh9tI1JhKkiMSBDYSVqFo/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
